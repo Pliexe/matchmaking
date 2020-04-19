@@ -103,5 +103,8 @@ export class Matchmaker<P> {
 		index = this.queue.findIndex((player) => { return this.getKey(player) == playerKey; });
 		return index;
 	}
+	public inQueue = (player: P): boolean => {
+		return this.indexOnQueue(player) !== -1;
+	}
 
 }
